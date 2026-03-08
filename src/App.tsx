@@ -100,6 +100,35 @@ const App = () => (
               <Route path="settings" element={<SettingsPage />} />
             </Route>
 
+            {/* Professional Dashboard */}
+            <Route path="/pro" element={<ProDashboardLayout />}>
+              <Route index element={<ProOverview />} />
+              <Route path="profile" element={<ProProfilePage />} />
+              <Route path="portfolio" element={<ProPortfolioPage />} />
+              <Route path="services" element={<ProServicesPage />} />
+              <Route path="quotes" element={<ProQuotesPage />} />
+              <Route path="projects" element={<ProProjectsPage />} />
+              <Route path="earnings" element={<ProEarningsPage />} />
+              <Route path="reviews" element={<ProReviewsPage />} />
+              <Route path="messages" element={<ProMessagesPage />} />
+              <Route path="notifications" element={<ProNotificationsPage />} />
+              <Route path="settings" element={<ProSettingsPage />} />
+            </Route>
+
+            {/* Admin Dashboard */}
+            <Route path="/admin" element={<AdminDashboardLayout />}>
+              <Route index element={<AdminOverview />} />
+              <Route path="users" element={<AdminUsersPage />} />
+              <Route path="projects" element={<AdminProjectsPage />} />
+              <Route path="quotes" element={<AdminQuotesPage />} />
+              <Route path="reviews" element={<AdminReviewsPage />} />
+              <Route path="materials" element={<AdminMaterialsPage />} />
+              <Route path="blog" element={<AdminBlogPage />} />
+              <Route path="categories" element={<AdminCategoriesPage />} />
+              <Route path="disputes" element={<AdminDisputesPage />} />
+              <Route path="analytics" element={<AdminAnalyticsPage />} />
+            </Route>
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
