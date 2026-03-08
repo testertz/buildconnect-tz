@@ -47,6 +47,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <Button variant="ghost" asChild>
             <Link to="/login">Log in</Link>
           </Button>
