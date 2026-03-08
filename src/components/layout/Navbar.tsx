@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, HardHat, ChevronDown } from "lucide-react";
+import { Menu, X, HardHat } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Find Professionals", href: "/explore" },
@@ -46,6 +47,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <Button variant="ghost" asChild>
             <Link to="/login">Log in</Link>
           </Button>
@@ -55,13 +57,16 @@ export function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="lg:hidden rounded-md p-2 text-muted-foreground hover:bg-muted"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-1 lg:hidden">
+          <ThemeToggle />
+          <button
+            className="rounded-md p-2 text-muted-foreground hover:bg-muted"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
