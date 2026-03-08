@@ -57,11 +57,13 @@ export function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="lg:hidden rounded-md p-2 text-muted-foreground hover:bg-muted"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
+        <div className="flex items-center gap-1 lg:hidden">
+          <ThemeToggle />
+          <button
+            className="rounded-md p-2 text-muted-foreground hover:bg-muted"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
