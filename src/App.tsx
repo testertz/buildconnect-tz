@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/NotFound";
 import { DashboardLayout } from "./components/layout/DashboardLayout";
+import { ProDashboardLayout } from "./components/layout/ProDashboardLayout";
+import { AdminDashboardLayout } from "./components/layout/AdminDashboardLayout";
 
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const ExplorePage = lazy(() => import("./pages/ExplorePage"));
@@ -19,7 +21,7 @@ const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const FAQPage = lazy(() => import("./pages/FAQPage"));
 
-// Dashboard pages
+// Client Dashboard pages
 const DashboardOverview = lazy(() => import("./pages/dashboard/DashboardOverview"));
 const PostProjectPage = lazy(() => import("./pages/dashboard/PostProjectPage"));
 const MyProjectsPage = lazy(() => import("./pages/dashboard/MyProjectsPage"));
@@ -29,6 +31,31 @@ const SavedProsPage = lazy(() => import("./pages/dashboard/SavedProsPage"));
 const PaymentsPage = lazy(() => import("./pages/dashboard/PaymentsPage"));
 const ReviewsPage = lazy(() => import("./pages/dashboard/ReviewsPage"));
 const SettingsPage = lazy(() => import("./pages/dashboard/SettingsPage"));
+
+// Professional Dashboard pages
+const ProOverview = lazy(() => import("./pages/pro/ProOverview"));
+const ProProfilePage = lazy(() => import("./pages/pro/ProProfilePage"));
+const ProPortfolioPage = lazy(() => import("./pages/pro/ProPortfolioPage"));
+const ProServicesPage = lazy(() => import("./pages/pro/ProServicesPage"));
+const ProQuotesPage = lazy(() => import("./pages/pro/ProQuotesPage"));
+const ProProjectsPage = lazy(() => import("./pages/pro/ProProjectsPage"));
+const ProEarningsPage = lazy(() => import("./pages/pro/ProEarningsPage"));
+const ProReviewsPage = lazy(() => import("./pages/pro/ProReviewsPage"));
+const ProMessagesPage = lazy(() => import("./pages/pro/ProMessagesPage"));
+const ProNotificationsPage = lazy(() => import("./pages/pro/ProNotificationsPage"));
+const ProSettingsPage = lazy(() => import("./pages/pro/ProSettingsPage"));
+
+// Admin Dashboard pages
+const AdminOverview = lazy(() => import("./pages/admin/AdminOverview"));
+const AdminUsersPage = lazy(() => import("./pages/admin/AdminUsersPage"));
+const AdminProjectsPage = lazy(() => import("./pages/admin/AdminProjectsPage"));
+const AdminQuotesPage = lazy(() => import("./pages/admin/AdminQuotesPage"));
+const AdminReviewsPage = lazy(() => import("./pages/admin/AdminReviewsPage"));
+const AdminMaterialsPage = lazy(() => import("./pages/admin/AdminMaterialsPage"));
+const AdminBlogPage = lazy(() => import("./pages/admin/AdminBlogPage"));
+const AdminCategoriesPage = lazy(() => import("./pages/admin/AdminCategoriesPage"));
+const AdminDisputesPage = lazy(() => import("./pages/admin/AdminDisputesPage"));
+const AdminAnalyticsPage = lazy(() => import("./pages/admin/AdminAnalyticsPage"));
 
 const queryClient = new QueryClient();
 
